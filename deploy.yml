@@ -40,7 +40,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/springboot-aws-cicd-pipeline:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/springboot-aws-cicd-pipeline:latest .
             ${{ secrets.DOCKERHUB_USERNAME }}/springboot-aws-cicd-pipeline:${{ github.sha }}
 
       - name: Deploy to EC2 over SSH
